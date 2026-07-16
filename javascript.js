@@ -12,7 +12,10 @@ function getComputerChoice(randomNumber) {
     }
 }
 
-let computerChoice = getComputerChoice(Math.random())
+const computerChoice = getComputerChoice(Math.random())
 
+// step 2 should get the human choice
 
-console.log( computerChoice )
+function getHumanChoice() {
+
+}
