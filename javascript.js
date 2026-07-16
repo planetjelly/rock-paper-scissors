@@ -14,8 +14,10 @@ function getComputerChoice(randomNumber) {
 
 const computerChoice = getComputerChoice(Math.random())
 
+console.log("computer picks " + computerChoice)
+
 // step 2 should get the human choice
 
-function getHumanChoice() {
+const humanChoice = prompt("What is your choice?")
 
-}
+console.log("human picks " + humanChoice)
