@@ -35,11 +35,11 @@ function playRound(humanChoice, computerChoice) {
 
 function getComputerChoice(randomNumber) {
     if ( randomNumber < .33 ) {
-        return "Rock"
+        return "rock"
     } else if ( randomNumber < .66 ) {
-        return "Paper"
+        return "paper"
     } else {
-        return "Scissors"
+        return "scissors"
     }
 }
 
