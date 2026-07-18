@@ -65,8 +65,10 @@ console.log(result)
 function updateScore(result) {
     if (result == "You win") {
         return ++humanScore
-    } else {
+    } else if (result == "You lose") {
         return ++computerScore
+    } else {
+        return console.log("Tie! No score change.")
     }
 }
 
