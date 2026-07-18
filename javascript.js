@@ -60,7 +60,10 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const result = playRound(humanChoice, computerChoice)
+
 console.log(result)
+
+// this section should update the score after a round is played
 
 function updateScore(result) {
     if (result == "You win") {
@@ -73,6 +76,9 @@ function updateScore(result) {
 }
 
 updateScore(result)
+
+// This should display score after a round
+
 console.log("Human score: " + humanScore)
 console.log("Computer score: " + computerScore)
 
