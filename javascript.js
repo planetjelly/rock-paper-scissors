@@ -1,5 +1,6 @@
 console.log("Hello, world!")
 
+
 // this step should randomly return "rock", "paper", or "scissors" for the computer choice
 
 function getComputerChoice(randomNumber) {
@@ -27,39 +28,20 @@ console.log(humanChoice)
 let computerScore = 0
 let humanScore = 0
 
-// this step should play a round
+// this step should decide if the round is tied or needs to be scored
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === "rock") {
-        if (computerChoice === "paper") {
-            return alert("You lose");
-        } else if (computerChoice === "scissors") {
-            return alert("You win");
-        } else {}
-            return alert("Tie");
-        }
-    } else if (humanChoice === "paper") {
-        if (computerChoice === "scissors") {
-            return alert("You lose");
-        } else if (computerChoice === "rock") {
-            return alert("You win");
-        } else (computerChoice === "paper") {
-            return alert("tie");
-        }
-    } else (humanChoice === "scissors") {
-        if (computerChoice === "rock") {
-            return alert("You lose");
-        } else if (computerChoice === "paper") {
-            return alert("You win");
-        } else (computerChoice === "scissors") {
-            return alert("tie");
-        }
+    if (humanChoice === computerChoice) {
+        return "tie"
+    } else if (humanChoice != computerChoice) {
+        return "Need score"
     }
-        
-    
+}
 
-    
-    console.trace(playRound())
+console.log(playRound(humanChoice, computerChoice))
+
+       
+
 
 
 
