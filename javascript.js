@@ -15,14 +15,14 @@ function getComputerChoice(randomNumber) {
 
 const computerChoice = getComputerChoice(Math.random())
 
-console.log(computerChoice)
+console.log("Computer picks " + computerChoice)
 
 // this step should get the human choice
 
 const humanInput = prompt("What is your choice?")
 const humanChoice = humanInput.toLowerCase()
 
-console.log(humanChoice)
+console.log("Human picks " + humanChoice)
 
 // this step should declare score variables at a global scale, starting with zero 
 
@@ -61,6 +61,20 @@ function playRound(humanChoice, computerChoice) {
 
 const result = playRound(humanChoice, computerChoice)
 console.log(result)
+
+function updateScore(result) {
+    if (result == "You win") {
+        return ++humanScore
+    } else {
+        return ++computerScore
+    }
+}
+
+updateScore(result)
+console.log("Human score: " + humanScore)
+console.log("Computer score: " + computerScore)
+
+
 
 
 
