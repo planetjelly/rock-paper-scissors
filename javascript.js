@@ -29,37 +29,39 @@ console.log(humanChoice)
 let computerScore = 0
 let humanScore = 0
 
-// this step should play a round and return the result
+// this step should decide round winner
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock") {
         if (computerChoice === "paper") {
-            return alert("You lose")
+            return "You lose"
         } else if (computerChoice === "scissors") {
-            return alert("You win")
+            return "You win"
         } else {
-            return alert("Tie")
+            return "Tie"
         }
     } else if (humanChoice === "paper") {
         if (computerChoice === "scissors") {
-            return alert("You lose")
+            return "You lose"
         } else if (computerChoice === "rock") {
-            return alert("You win")
+            return "You win"
         } else {
-            return alert("tie")
+            return "tie"
         }
     } else {
         if (computerChoice === "rock") {
-            return alert("You lose")
+            return "You lose"
         } else if (computerChoice === "paper") {
-            return alert("You win")
+            return "You win"
         } else {
-            return alert("tie")
+            return "tie"
         }
     }
 }
 
-playRound(humanChoice, computerChoice)
+const result = playRound(humanChoice, computerChoice)
+console.log(result)
+
 
 
 
