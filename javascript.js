@@ -28,13 +28,33 @@ console.log(humanChoice)
 let computerScore = 0
 let humanScore = 0
 
-// this step should decide if the round is tied or needs to be scored
+// this step should play a round and return the result
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === computerChoice) {
-        return "tie"
-    } else if (humanChoice != computerChoice) {
-        return "Need score"
+    if (humanChoice === "rock") {
+        if (computerChoice === "paper") {
+            return alert("You lose")
+        } else if (computerChoice === "scissors") {
+            return alert("You win")
+        } else {
+            return alert("Tie")
+        }
+    } else if (humanChoice === "paper") {
+        if (computerChoice === "scissors") {
+            return alert("You lose")
+        } else if (computerChoice === "rock") {
+            return alert("You win")
+        } else {
+            return alert("tie")
+        }
+    } else {
+        if (computerChoice === "rock") {
+            return alert("You lose")
+        } else if (computerChoice === "paper") {
+            return alert("You win")
+        } else {
+            return alert("tie")
+        }
     }
 }
 
