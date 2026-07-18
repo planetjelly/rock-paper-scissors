@@ -19,7 +19,8 @@ console.log(computerChoice)
 
 // this step should get the human choice
 
-const humanChoice = prompt("What is your choice?")
+const humanInput = prompt("What is your choice?")
+const humanChoice = humanInput.toLowerCase()
 
 console.log(humanChoice)
 
@@ -59,6 +60,8 @@ function playRound(humanChoice, computerChoice) {
 }
 
 playRound(humanChoice, computerChoice)
+
+
 
        
 
