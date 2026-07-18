@@ -15,14 +15,13 @@ function getComputerChoice(randomNumber) {
 
 const computerChoice = getComputerChoice(Math.random())
 
-console.log("Computer picks " + computerChoice)
 
 // this step should get the human choice
 
-const humanInput = prompt("What is your choice?")
+let humanInput = prompt("What is your choice?")
 const humanChoice = humanInput.toLowerCase()
 
-console.log("Human picks " + humanChoice)
+
 
 // this step should declare score variables at a global scale, starting with zero 
 
@@ -61,7 +60,6 @@ function playRound(humanChoice, computerChoice) {
 
 const result = playRound(humanChoice, computerChoice)
 
-console.log(result)
 
 // this section should update the score after a round is played
 
@@ -71,16 +69,19 @@ function updateScore(result) {
     } else if (result == "You lose") {
         return ++computerScore
     } else {
-        return console.log("Tie! No score change.")
+        return "tie"
     }
 }
 
 updateScore(result)
 
-// This should display score after a round
+// for testing- This should display score after a round.
+// can probably be removed or adjusted once game is setup to play 5 rounds 
 
 console.log("Human score: " + humanScore)
 console.log("Computer score: " + computerScore)
+
+
 
 
 
