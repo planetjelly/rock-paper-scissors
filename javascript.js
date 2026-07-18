@@ -58,7 +58,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-console.log(playRound(humanChoice, computerChoice))
+playRound(humanChoice, computerChoice)
 
        
 
