@@ -13,11 +13,16 @@ function getComputerChoice(randomNumber) {
 }
 
 const computerChoice = getComputerChoice(Math.random())
+console.log("Computer picked " + computerChoice)
 
 // this step should get the human choice
 
-let humanInput = prompt("What is your choice?")
-const humanChoice = humanInput.toLowerCase()
+function getHumanChoice() {
+    return prompt("What is your choice?").toLowerCase()
+}
+
+const humanChoice = getHumanChoice()
+console.log("You picked " + humanChoice)
 
 // this step should declare score variables at a global scale, starting with zero 
 
@@ -55,6 +60,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const result = playRound(humanChoice, computerChoice)
+console.log(result)
 
 // this section should update the score after a round is played
 
