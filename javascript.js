@@ -1,6 +1,5 @@
 console.log("Hello, world!")
 
-
 // this step should randomly return "rock", "paper", or "scissors" for the computer choice
 
 function getComputerChoice(randomNumber) {
@@ -15,13 +14,10 @@ function getComputerChoice(randomNumber) {
 
 const computerChoice = getComputerChoice(Math.random())
 
-
 // this step should get the human choice
 
 let humanInput = prompt("What is your choice?")
 const humanChoice = humanInput.toLowerCase()
-
-
 
 // this step should declare score variables at a global scale, starting with zero 
 
@@ -59,7 +55,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const result = playRound(humanChoice, computerChoice)
-
 
 // this section should update the score after a round is played
 
