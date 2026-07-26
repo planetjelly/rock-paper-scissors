@@ -50,7 +50,7 @@ function playGame() {
     
 
     // Play one round of RPS
-    function playRound(humanChoice = getHumanChoice(), computerChoice) {
+    function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice(Math.random())) {
         if (humanChoice === "rock") {
             if (computerChoice === "paper") {
                 return "You lose"
@@ -77,7 +77,8 @@ function playGame() {
             }
         }
     }
-    playRound();
+    console.log(playRound());
+    console.log(playRound());
 }
 
 
