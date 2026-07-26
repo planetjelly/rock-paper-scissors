@@ -26,10 +26,6 @@ console.log("You picked " + humanChoice)
 
 
 
-
-const result = playRound(humanChoice, computerChoice)
-console.log(result)
-
 // Update score depending on the results of playRound
 
 function updateScore(result) {
@@ -55,6 +51,7 @@ console.log("Computer score: " + computerScore)
 function playGame() {
     let computerScore = 0
     let humanScore = 0
+    
 
     // Play one round of RPS
     function playRound(humanChoice, computerChoice) {
@@ -84,7 +81,8 @@ function playGame() {
             }
         }
     }
-    playRound();
+    const result = playRound(humanChoice, computerChoice)
+    console.log(result)
 }
 
 
