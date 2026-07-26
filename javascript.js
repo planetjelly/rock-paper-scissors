@@ -1,6 +1,6 @@
 console.log("Hello, world!")
 
-// this step should randomly return "rock", "paper", or "scissors" for the computer choice
+// Randomly return "rock", "paper", or "scissors" for the computer choice
 
 function getComputerChoice(randomNumber) {
     if ( randomNumber < .33 ) {
@@ -15,7 +15,7 @@ function getComputerChoice(randomNumber) {
 const computerChoice = getComputerChoice(Math.random())
 console.log("Computer picked " + computerChoice)
 
-// this step should get the human choice
+// Get human choice
 
 function getHumanChoice() {
     return prompt("What is your choice?").toLowerCase()
@@ -30,7 +30,7 @@ console.log("You picked " + humanChoice)
 const result = playRound(humanChoice, computerChoice)
 console.log(result)
 
-// this section should update the score after a round is played
+// Update score depending on the results of playRound
 
 function updateScore(result) {
     if (result == "You win") {
@@ -56,8 +56,7 @@ function playGame() {
     let computerScore = 0
     let humanScore = 0
 
-        // this step should decide round winner
-
+    // Play one round of RPS
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === "rock") {
             if (computerChoice === "paper") {
@@ -85,6 +84,7 @@ function playGame() {
             }
         }
     }
+    playRound();
 }
 
 
