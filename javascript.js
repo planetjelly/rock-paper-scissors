@@ -20,10 +20,8 @@ console.log("Computer picked " + computerChoice)
 function getHumanChoice() {
     return prompt("What is your choice?").toLowerCase()
 }
-
 const humanChoice = getHumanChoice()
-console.log("You picked " + humanChoice)
-
+console.log()
 
 
 // Update score depending on the results of playRound
@@ -37,8 +35,6 @@ function updateScore(result) {
         return "tie"
     }
 }
-
-updateScore(result)
 
 // for testing- This should display score after a round.
 // can probably be removed or adjusted once game is setup to play 5 rounds 
@@ -54,7 +50,7 @@ function playGame() {
     
 
     // Play one round of RPS
-    function playRound(humanChoice, computerChoice) {
+    function playRound(humanChoice = getHumanChoice(), computerChoice) {
         if (humanChoice === "rock") {
             if (computerChoice === "paper") {
                 return "You lose"
@@ -81,8 +77,7 @@ function playGame() {
             }
         }
     }
-    const result = playRound(humanChoice, computerChoice)
-    console.log(result)
+    playRound();
 }
 
 
