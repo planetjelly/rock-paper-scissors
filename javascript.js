@@ -24,40 +24,8 @@ function getHumanChoice() {
 const humanChoice = getHumanChoice()
 console.log("You picked " + humanChoice)
 
-// this step should declare score variables at a global scale, starting with zero 
 
-let computerScore = 0
-let humanScore = 0
 
-// this step should decide round winner
-
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice === "rock") {
-        if (computerChoice === "paper") {
-            return "You lose"
-        } else if (computerChoice === "scissors") {
-            return "You win"
-        } else {
-            return "Tie"
-        }
-    } else if (humanChoice === "paper") {
-        if (computerChoice === "scissors") {
-            return "You lose"
-        } else if (computerChoice === "rock") {
-            return "You win"
-        } else {
-            return "tie"
-        }
-    } else {
-        if (computerChoice === "rock") {
-            return "You lose"
-        } else if (computerChoice === "paper") {
-            return "You win"
-        } else {
-            return "tie"
-        }
-    }
-}
 
 const result = playRound(humanChoice, computerChoice)
 console.log(result)
@@ -82,7 +50,42 @@ updateScore(result)
 console.log("Human score: " + humanScore)
 console.log("Computer score: " + computerScore)
 
+// Play a full game of RPS, which is 5 rounds
 
+function playGame() {
+    let computerScore = 0
+    let humanScore = 0
+
+        // this step should decide round winner
+
+    function playRound(humanChoice, computerChoice) {
+        if (humanChoice === "rock") {
+            if (computerChoice === "paper") {
+                return "You lose"
+            } else if (computerChoice === "scissors") {
+                return "You win"
+            } else {
+                return "Tie"
+            }
+        } else if (humanChoice === "paper") {
+            if (computerChoice === "scissors") {
+                return "You lose"
+            } else if (computerChoice === "rock") {
+                return "You win"
+            } else {
+                return "tie"
+            }
+        } else {
+            if (computerChoice === "rock") {
+                return "You lose"
+            } else if (computerChoice === "paper") {
+                return "You win"
+            } else {
+                return "tie"
+            }
+        }
+    }
+}
 
 
 
