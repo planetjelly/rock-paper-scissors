@@ -23,18 +23,6 @@ function getHumanChoice() {
 const humanChoice = getHumanChoice()
 
 
-// Update score depending on the results of playRound
-
-function updateScore(result) {
-    if (result == "You win") {
-        return ++humanScore
-    } else if (result == "You lose") {
-        return ++computerScore
-    } else {
-        return "tie"
-    }
-}
-
 // for testing- This should display score after a round.
 // can probably be removed or adjusted once game is setup to play 5 rounds 
 
@@ -48,16 +36,18 @@ function playGame() {
     let humanScore = 0
     
 
-    // Play one round of RPS
+    // Play one round of RPS: decide winner, update score
     function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice(Math.random())) {
         let roundResult 
         if (humanChoice === "rock") {
             if (computerChoice === "paper") {
                 roundResult = "You lose";
-                console.log("Paper beats rock. You lose.")
+                console.log("Paper beats rock. You lose.");
+                ++computerScore;
             } else if (computerChoice === "scissors") {
                 roundResult = "You win";
                 console.log("Rock beats scissors. You win!");
+                ++humanScore;
             } else {
                 roundResult = "tie";
                 console.log("Tie: no points awarded.");
@@ -65,10 +55,12 @@ function playGame() {
         } else if (humanChoice === "paper") {
             if (computerChoice === "scissors") {
                 roundResult = "You lose";
+                ++computerScore;
                 console.log("Scissors beats paper. You lose.");
             } else if (computerChoice === "rock") {
                 roundResult = "You win";
                 console.log("Paper beats rock. You win!");
+                ++humanScore;
             } else {
                 roundResult = "tie";
                 console.log("Tie: no points awarded.");
@@ -77,9 +69,11 @@ function playGame() {
             if (computerChoice === "rock") {
                 roundResult = "You lose";
                 console.log("Rock beats scissors. You lose.");
+                ++computerScore;
             } else if (computerChoice === "paper") {
                 roundResult = "You win";
-                console.log("Scissors beats paper. You win!")
+                console.log("Scissors beats paper. You win!");
+                ++humanScore;
             } else {
                 roundResult = "tie";
                 console.log("Tie: no points awarded.");
@@ -87,7 +81,9 @@ function playGame() {
         }
     }
     console.log("Round 1");
-    console.log(playRound());
+    playRound();
+    console.log("Human score: " + humanScore)
+    console.log("Computer score: " + computerScore)
 }
 
 
