@@ -1,7 +1,6 @@
 console.log("Hello, world!")
 
 // Randomly return "rock", "paper", or "scissors" for the computer choice
-
 function getComputerChoice(randomNumber) {
     if ( randomNumber < .33 ) {
         return "rock"
@@ -12,25 +11,12 @@ function getComputerChoice(randomNumber) {
     }
 }
 
-const computerChoice = getComputerChoice(Math.random())
-console.log("Computer picked " + computerChoice)
-
 // Get human choice
-
 function getHumanChoice() {
     return prompt("What is your choice?").toLowerCase()
 }
-const humanChoice = getHumanChoice()
 
-
-// for testing- This should display score after a round.
-// can probably be removed or adjusted once game is setup to play 5 rounds 
-
-console.log("Human score: " + humanScore)
-console.log("Computer score: " + computerScore)
-
-// Play a full game of RPS, which is 5 rounds
-
+// Play a full game of RPS: play 5 games and update score
 function playGame() {
     let computerScore = 0
     let humanScore = 0
