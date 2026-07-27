@@ -21,7 +21,6 @@ function getHumanChoice() {
     return prompt("What is your choice?").toLowerCase()
 }
 const humanChoice = getHumanChoice()
-console.log()
 
 
 // Update score depending on the results of playRound
@@ -51,33 +50,43 @@ function playGame() {
 
     // Play one round of RPS
     function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice(Math.random())) {
+        let roundResult 
         if (humanChoice === "rock") {
             if (computerChoice === "paper") {
-                return "You lose"
+                roundResult = "You lose";
+                console.log("Paper beats rock. You lose.")
             } else if (computerChoice === "scissors") {
-                return "You win"
+                roundResult = "You win";
+                console.log("Rock beats scissors. You win!");
             } else {
-                return "Tie"
+                roundResult = "tie";
+                console.log("Tie: no points awarded.");
             }
         } else if (humanChoice === "paper") {
             if (computerChoice === "scissors") {
-                return "You lose"
+                roundResult = "You lose";
+                console.log("Scissors beats paper. You lose.");
             } else if (computerChoice === "rock") {
-                return "You win"
+                roundResult = "You win";
+                console.log("Paper beats rock. You win!");
             } else {
-                return "tie"
+                roundResult = "tie";
+                console.log("Tie: no points awarded.");
             }
         } else {
             if (computerChoice === "rock") {
-                return "You lose"
+                roundResult = "You lose";
+                console.log("Rock beats scissors. You lose.");
             } else if (computerChoice === "paper") {
-                return "You win"
+                roundResult = "You win";
+                console.log("Scissors beats paper. You win!")
             } else {
-                return "tie"
+                roundResult = "tie";
+                console.log("Tie: no points awarded.");
             }
         }
     }
-    console.log(playRound());
+    console.log("Round 1");
     console.log(playRound());
 }
 
