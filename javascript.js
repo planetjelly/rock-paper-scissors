@@ -84,6 +84,26 @@ function playGame() {
     playRound();
     console.log("Human score: " + humanScore)
     console.log("Computer score: " + computerScore)
+
+    console.log("Round 2");
+    playRound();
+    console.log("Human score: " + humanScore)
+    console.log("Computer score: " + computerScore)
+
+    console.log("Round 3");
+    playRound();
+    console.log("Human score: " + humanScore)
+    console.log("Computer score: " + computerScore)
+
+    console.log("Round 4");
+    playRound();
+    console.log("Human score: " + humanScore)
+    console.log("Computer score: " + computerScore)
+
+    console.log("Round 5");
+    playRound();
+    console.log("Human score: " + humanScore)
+    console.log("Computer score: " + computerScore)
 }
 
 
